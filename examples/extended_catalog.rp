@@ -1,0 +1,229 @@
+# Extended catalog of small definitional proofs.
+
+theorem plus_0_0 : plus Z Z = Z
+proof Refl
+
+theorem plus_0_1 : plus Z (S Z) = S Z
+proof Refl
+
+theorem plus_1_0 : plus (S Z) Z = S Z
+proof Refl
+
+theorem plus_1_1 : plus (S Z) (S Z) = S (S Z)
+proof Refl
+
+theorem plus_2_1 : plus (S (S Z)) (S Z) = S (S (S Z))
+proof Refl
+
+theorem plus_2_0 : plus (S (S Z)) Z = S (S Z)
+proof Refl
+
+theorem mult_0_0 : mult Z Z = Z
+proof Refl
+
+theorem mult_0_2 : mult Z (S (S Z)) = Z
+proof Refl
+
+theorem mult_1_0 : mult (S Z) Z = Z
+proof Refl
+
+theorem mult_1_1 : mult (S Z) (S Z) = S Z
+proof Refl
+
+theorem mult_2_1 : mult (S (S Z)) (S Z) = S (S Z)
+proof Refl
+
+theorem mult_2_2 : mult (S (S Z)) (S (S Z)) = plus (S (S Z)) (S (S Z))
+proof Refl
+
+theorem pow_2_0 : pow (S (S Z)) Z = S Z
+proof Refl
+
+theorem pow_2_1 : pow (S (S Z)) (S Z) = S (S Z)
+proof Refl
+
+theorem pow_2_2 : pow (S (S Z)) (S (S Z)) = mult (S (S Z)) (S (S Z))
+proof Refl
+
+theorem double_0 : double Z = Z
+proof Refl
+
+theorem double_1 : double (S Z) = S (S Z)
+proof Refl
+
+theorem double_2 : double (S (S Z)) = S (S (S (S Z)))
+proof Refl
+
+theorem pred_0 : pred Z = Z
+proof Refl
+
+theorem pred_1 : pred (S Z) = Z
+proof Refl
+
+theorem pred_2 : pred (S (S Z)) = S Z
+proof Refl
+
+theorem is_zero_0 : isZero Z = True
+proof Refl
+
+theorem is_zero_1 : isZero (S Z) = False
+proof Refl
+
+theorem even_0 : even Z = True
+proof Refl
+
+theorem even_1 : even (S Z) = False
+proof Refl
+
+theorem even_2 : even (S (S Z)) = True
+proof Refl
+
+theorem odd_0 : odd Z = False
+proof Refl
+
+theorem odd_1 : odd (S Z) = True
+proof Refl
+
+theorem odd_2 : odd (S (S Z)) = False
+proof Refl
+
+theorem list_append_nil : append (Cons Z Nil) Nil = Cons Z Nil
+proof Refl
+
+theorem list_length_nil : length Nil = Z
+proof Refl
+
+theorem list_length_singleton : length (Cons Z Nil) = S Z
+proof Refl
+
+theorem list_reverse_nil : reverse Nil = Nil
+proof Refl
+
+theorem list_reverse_singleton : reverse (Cons Z Nil) = Cons Z Nil
+proof Refl
+
+theorem list_map_identity : map (\x => x) (Cons Z Nil) = Cons Z Nil
+proof Refl
+
+theorem list_snoc_nil : snoc Nil Z = Cons Z Nil
+proof Refl
+
+theorem list_snoc_singleton : snoc (Cons Z Nil) (S Z) = Cons Z (Cons (S Z) Nil)
+proof Refl
+
+theorem list_concat_two : concat (Cons (Cons Z Nil) (Cons (Cons (S Z) Nil) Nil)) = Cons Z (Cons (S Z) Nil)
+proof Refl
+
+theorem list_replicate_zero : replicate Z Z = Nil
+proof Refl
+
+theorem list_replicate_one : replicate (S Z) Z = Cons Z Nil
+proof Refl
+
+theorem list_filter_true : filter (\_ => True) (Cons Z Nil) = Cons Z Nil
+proof Refl
+
+theorem list_filter_false : filter (\_ => False) (Cons Z Nil) = Nil
+proof Refl
+
+theorem bool_and_true_true : and True True = True
+proof Refl
+
+theorem bool_and_true_false : and True False = False
+proof Refl
+
+theorem bool_and_false_true : and False True = False
+proof Refl
+
+theorem bool_and_false_false : and False False = False
+proof Refl
+
+theorem bool_or_true_true : or True True = True
+proof Refl
+
+theorem bool_or_true_false : or True False = True
+proof Refl
+
+theorem bool_or_false_true : or False True = True
+proof Refl
+
+theorem bool_or_false_false : or False False = False
+proof Refl
+
+theorem bool_not_true : not True = False
+proof Refl
+
+theorem bool_not_false : not False = True
+proof Refl
+
+theorem bool_xor_true_false : xor True False = True
+proof Refl
+
+theorem bool_xor_true_true : xor True True = False
+proof Refl
+
+theorem bool_xor_false_false : xor False False = False
+proof Refl
+
+theorem bool_xor_false_true : xor False True = True
+proof Refl
+
+theorem min_0_1 : min Z (S Z) = Z
+proof Refl
+
+theorem min_1_0 : min (S Z) Z = Z
+proof Refl
+
+theorem max_0_1 : max Z (S Z) = S Z
+proof Refl
+
+theorem max_1_0 : max (S Z) Z = S Z
+proof Refl
+
+theorem sub_1_0 : sub (S Z) Z = S Z
+proof Refl
+
+theorem sub_1_1 : sub (S Z) (S Z) = Z
+proof Refl
+
+theorem leq_0_1 : leq Z (S Z) = True
+proof Refl
+
+theorem leq_1_0 : leq (S Z) Z = False
+proof Refl
+
+theorem lt_0_1 : lt Z (S Z) = True
+proof Refl
+
+theorem lt_1_0 : lt (S Z) Z = False
+proof Refl
+
+theorem eqnat_0_0 : eqNat Z Z = True
+proof Refl
+
+theorem eqnat_0_1 : eqNat Z (S Z) = False
+proof Refl
+
+theorem eqnat_1_1 : eqNat (S Z) (S Z) = True
+proof Refl
+
+theorem eqnat_1_2 : eqNat (S Z) (S (S Z)) = False
+proof Refl
+
+theorem list_append_two : append (Cons Z Nil) (Cons (S Z) Nil) = Cons Z (Cons (S Z) Nil)
+proof Refl
+
+theorem list_append_three : append (Cons Z (Cons (S Z) Nil)) (Cons (S (S Z)) Nil) = Cons Z (Cons (S Z) (Cons (S (S Z)) Nil))
+proof Refl
+
+theorem list_length_two : length (Cons Z (Cons (S Z) Nil)) = S (S Z)
+proof Refl
+
+theorem list_reverse_two : reverse (Cons Z (Cons (S Z) Nil)) = Cons (S Z) (Cons Z Nil)
+proof Refl
+
+theorem list_map_inc : map (\n => S n) (Cons Z (Cons (S Z) Nil)) = Cons (S Z) (Cons (S (S Z)) Nil)
+proof Refl
+
+theorem list_filter_even : filter even (Cons Z (Cons (S Z) (Cons (S (S Z)) Nil))) = Cons Z (Cons (S (S Z)) Nil)
+proof Refl

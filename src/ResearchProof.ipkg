@@ -1,0 +1,18 @@
+package ResearchProof
+
+author = "ResearchProof Maintainers"
+version = "0.1.0"
+
+sourcedir = src
+
+modules = Main
+        , Proof
+        , Proof.Nat
+        , Proof.Bool
+        , Proof.List
+        , Proof.Logic
+        , Proof.Arithmetic
+        , Examples
+
+main = Main
+executable = researchproof

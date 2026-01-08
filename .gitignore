@@ -1,3 +1,2 @@
-*.ibc
-*.ipkg
-*.idr
+__pycache__/
+*.pyc

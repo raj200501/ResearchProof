@@ -1,0 +1,34 @@
+# List proofs.
+
+theorem append_nil_right : (xs : List Nat) -> append xs Nil = xs
+proof appendNilRight xs
+
+theorem append_nil_left : (xs : List Nat) -> append Nil xs = xs
+proof appendNilLeft xs
+
+theorem append_assoc : (xs : List Nat) -> (ys : List Nat) -> (zs : List Nat) -> append (append xs ys) zs = append xs (append ys zs)
+proof appendAssoc xs ys zs
+
+theorem length_append : (xs : List Nat) -> (ys : List Nat) -> length (append xs ys) = plus (length xs) (length ys)
+proof lengthAppend xs ys
+
+theorem length_snoc : (xs : List Nat) -> (x : Nat) -> length (snoc xs x) = S (length xs)
+proof lengthSnoc xs x
+
+theorem length_replicate : (n : Nat) -> (x : Nat) -> length (replicate n x) = n
+proof lengthReplicate n x
+
+theorem map_identity : (xs : List Nat) -> map (\x => x) xs = xs
+proof mapIdentity xs
+
+theorem map_compose : (f : Nat -> Nat) -> (g : Nat -> Nat) -> (xs : List Nat) -> map f (map g xs) = map (\x => f (g x)) xs
+proof mapCompose f g xs
+
+theorem reverse_append : (xs : List Nat) -> (ys : List Nat) -> reverse (append xs ys) = append (reverse ys) (reverse xs)
+proof reverseAppend xs ys
+
+theorem reverse_involutive : (xs : List Nat) -> reverse (reverse xs) = xs
+proof reverseInvolutive xs
+
+theorem foldr_append : (f : Nat -> Nat -> Nat) -> (acc : Nat) -> (xs : List Nat) -> (ys : List Nat) -> foldr f acc (append xs ys) = foldr f (foldr f acc ys) xs
+proof foldrAppend f acc xs ys

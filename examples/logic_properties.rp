@@ -1,0 +1,34 @@
+# Propositional logic proofs.
+
+theorem and_comm : And a b -> And b a
+proof andComm
+
+theorem and_assoc : And (And a b) c -> And a (And b c)
+proof andAssoc
+
+theorem and_assoc_inv : And a (And b c) -> And (And a b) c
+proof andAssocInv
+
+theorem or_comm : Or a b -> Or b a
+proof orComm
+
+theorem or_assoc : Or (Or a b) c -> Or a (Or b c)
+proof orAssoc
+
+theorem or_assoc_inv : Or a (Or b c) -> Or (Or a b) c
+proof orAssocInv
+
+theorem and_distrib_or : And a (Or b c) -> Or (And a b) (And a c)
+proof andDistributesOverOr
+
+theorem or_distrib_and : Or a (And b c) -> And (Or a b) (Or a c)
+proof orDistributesOverAnd
+
+theorem iff_refl : Iff a a
+proof iffRefl
+
+theorem iff_sym : Iff a b -> Iff b a
+proof iffSym
+
+theorem iff_trans : Iff a b -> Iff b c -> Iff a c
+proof iffTrans
