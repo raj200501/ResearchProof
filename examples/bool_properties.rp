@@ -1,0 +1,49 @@
+# Boolean algebra proofs.
+
+theorem and_true_left : (b : Bool) -> and True b = b
+proof andTrueLeft b
+
+theorem and_true_right : (b : Bool) -> and b True = b
+proof andTrueRight b
+
+theorem and_false_left : (b : Bool) -> and False b = False
+proof andFalseLeft b
+
+theorem and_false_right : (b : Bool) -> and b False = False
+proof andFalseRight b
+
+theorem or_true_left : (b : Bool) -> or True b = True
+proof orTrueLeft b
+
+theorem or_true_right : (b : Bool) -> or b True = True
+proof orTrueRight b
+
+theorem or_false_left : (b : Bool) -> or False b = b
+proof orFalseLeft b
+
+theorem or_false_right : (b : Bool) -> or b False = b
+proof orFalseRight b
+
+theorem not_involutive : (b : Bool) -> not (not b) = b
+proof notInvolutive b
+
+theorem xor_comm : (a : Bool) -> (b : Bool) -> xor a b = xor b a
+proof xorComm a b
+
+theorem xor_false_left : (b : Bool) -> xor False b = b
+proof xorFalseLeft b
+
+theorem xor_false_right : (b : Bool) -> xor b False = b
+proof xorFalseRight b
+
+theorem xor_true_left : (b : Bool) -> xor True b = not b
+proof xorTrueLeft b
+
+theorem xor_true_right : (b : Bool) -> xor b True = not b
+proof xorTrueRight b
+
+theorem not_and : (a : Bool) -> (b : Bool) -> not (and a b) = or (not a) (not b)
+proof notAnd a b
+
+theorem not_or : (a : Bool) -> (b : Bool) -> not (or a b) = and (not a) (not b)
+proof notOr a b

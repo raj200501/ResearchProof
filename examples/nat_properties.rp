@@ -1,0 +1,67 @@
+# Natural number proofs.
+
+theorem plus_zero_left : (n : Nat) -> plus Z n = n
+proof plusZeroLeft n
+
+theorem plus_zero_right : (n : Nat) -> plus n Z = n
+proof plusZeroRight n
+
+theorem plus_succ_right : (n : Nat) -> (m : Nat) -> plus n (S m) = S (plus n m)
+proof plusSuccRight n m
+
+theorem plus_succ_left : (n : Nat) -> (m : Nat) -> plus (S n) m = S (plus n m)
+proof plusSuccLeft n m
+
+theorem plus_assoc : (x : Nat) -> (y : Nat) -> (z : Nat) -> plus (plus x y) z = plus x (plus y z)
+proof plusAssoc x y z
+
+theorem plus_comm : (x : Nat) -> (y : Nat) -> plus x y = plus y x
+proof plusComm x y
+
+theorem plus_self_succ : (n : Nat) -> plus n (S n) = S (plus n n)
+proof plusSelfSucc n
+
+theorem plus_swap : (x : Nat) -> (y : Nat) -> plus x (S y) = plus (S x) y
+proof plusSwap x y
+
+theorem mult_zero_left : (n : Nat) -> mult Z n = Z
+proof multZeroLeft n
+
+theorem mult_zero_right : (n : Nat) -> mult n Z = Z
+proof multZeroRight n
+
+theorem mult_one_left : (n : Nat) -> mult (S Z) n = n
+proof multOneLeft n
+
+theorem mult_one_right : (n : Nat) -> mult n (S Z) = n
+proof multOneRight n
+
+theorem mult_succ_left : (n : Nat) -> (m : Nat) -> mult (S n) m = plus m (mult n m)
+proof multSuccLeft n m
+
+theorem mult_distrib_left : (x : Nat) -> (y : Nat) -> (z : Nat) -> mult x (plus y z) = plus (mult x y) (mult x z)
+proof multDistribLeft x y z
+
+theorem mult_assoc : (x : Nat) -> (y : Nat) -> (z : Nat) -> mult (mult x y) z = mult x (mult y z)
+proof multAssoc x y z
+
+theorem pow_zero : (n : Nat) -> pow n Z = S Z
+proof powZero n
+
+theorem pow_succ : (n : Nat) -> (m : Nat) -> pow n (S m) = mult n (pow n m)
+proof powSucc n m
+
+theorem pow_one : (n : Nat) -> pow n (S Z) = n
+proof powOne n
+
+theorem pow_two : (n : Nat) -> pow n (S (S Z)) = mult n n
+proof powTwo n
+
+theorem double_is_plus : (n : Nat) -> double n = plus n n
+proof doubleIsPlus n
+
+theorem double_succ : (n : Nat) -> double (S n) = S (S (double n))
+proof doubleSucc n
+
+theorem pred_inverse : (n : Nat) -> pred (S n) = n
+proof predIsLeftInverse n

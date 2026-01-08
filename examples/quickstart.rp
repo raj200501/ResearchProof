@@ -1,0 +1,13 @@
+# Quickstart proof script for ResearchProof.
+
+# Proof: adding zero on the right leaves the number unchanged.
+theorem plus_zero_right : (n : Nat) -> plus n Z = n
+proof plusZeroRight n
+
+# Proof: multiplication by one is identity.
+theorem mult_one_right : (n : Nat) -> mult n (S Z) = n
+proof multOneRight n
+
+# Proof: even numbers remain even when doubled.
+theorem even_double : (n : Nat) -> even (double n) = True
+proof evenDouble n

@@ -1,3 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -euo pipefail
 
-idris --build src/ResearchProof.ipkg
+REPO_ROOT=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
+
+python3 -m compileall "${REPO_ROOT}/researchproof"

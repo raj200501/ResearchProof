@@ -1,0 +1,28 @@
+# Arithmetic proofs built on Nat and Bool.
+
+theorem leq_refl : (n : Nat) -> leq n n = True
+proof leqRefl n
+
+theorem leq_zero_left : (n : Nat) -> leq Z n = True
+proof leqZeroLeft n
+
+theorem leq_zero_right : (n : Nat) -> leq n Z = isZero n
+proof leqZeroRight n
+
+theorem min_comm : (x : Nat) -> (y : Nat) -> min x y = min y x
+proof minComm x y
+
+theorem max_comm : (x : Nat) -> (y : Nat) -> max x y = max y x
+proof maxComm x y
+
+theorem sub_zero_right : (n : Nat) -> sub n Z = n
+proof subZeroRight n
+
+theorem sub_self : (n : Nat) -> sub n n = Z
+proof subSelf n
+
+theorem even_double : (n : Nat) -> even (double n) = True
+proof evenDouble n
+
+theorem odd_succ : (n : Nat) -> odd (S n) = not (odd n)
+proof oddSucc n
